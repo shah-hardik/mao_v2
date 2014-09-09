@@ -15,8 +15,8 @@
          <li><a href="<?php l('customer') ?>">Customer </a></li>
           <li><a href="<?php l('category') ?>">Category  </a></li>
            
-  <!--        <li><a href="<?php ('') ?>">| AGENTS</a></li>
-           <li><a href="<?php l('towers') ?>">| TOWERS </a></li>
+          <li><a href="<?php l('product') ?>">Product</a></li>
+         <!--  <li><a href="<?php l('towers') ?>">| TOWERS </a></li>
            
          <li><a href="<?php ('') ?>">| LOCATION </a></li>
            <li><a href="<?php l('product') ?>">| PRODUCTS </a></li>-->
