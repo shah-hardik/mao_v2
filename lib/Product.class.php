@@ -28,6 +28,9 @@ class Product {
     public static function getproductDetail($id) {
         return qs("SELECT * FROM product WHERE id = " . $id);
     }
+    public static function checkproductId($id) {
+        return qs("SELECT * FROM product WHERE product_id = " . $id);
+    }
 
     public static function getproductList() {
         return q("SELECT * FROM product order by id DESC LIMIT 0,10");

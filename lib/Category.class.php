@@ -8,6 +8,10 @@
  * 
  * 
  */
+include _PATH . "instance/front/tpl/bigcommerce.php";
+
+//require_once 'bigcommerce.php';
+use Bigcommerce\Api\Client as Bigcommerce;
 class Category {
     # constructor
 
@@ -43,6 +47,11 @@ class Category {
 
     public static function getcategoryDetail($id) {
         return qs("SELECT * FROM category WHERE id = " . $id);
+    }
+     public static function getproductfromcategory($cat_id) {
+        
+         $filter = array("category" => $cat_id);
+          $products = Bigcommerce::getProducts($filter);
     }
 
     public static function getcategoryList() {
