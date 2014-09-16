@@ -65,7 +65,7 @@ class User {
      * @return boolean
      */
     public static function doLogin($user_name, $password) {
-        self::$user_data = qs(sprintf("select * from admin_users where user_name = '%s' and password = '%s'", $user_name, $password));
+        self::$user_data = qs(sprintf("select * from customers where email = '%s' and password = '%s'", $user_name, $password));
         if (!empty(self::$user_data)) {
             self::$user_data['user_type'] = 'admin';
         }
@@ -109,7 +109,7 @@ class User {
     }
 
     public static function initUserSession($user_name) {
-        self::$user_data = qs("select * from admin_users where user_name = '{$user_name}'");
+        self::$user_data = qs("select * from customers where email = '{$user_name}'");
         self::$user_data['user_type'] = 'admin';
         User::setSession($user_name);
         session_regenerate_id();

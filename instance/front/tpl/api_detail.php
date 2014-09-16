@@ -1,6 +1,6 @@
 <div class="addAffiliates actionItem">
     <div class="panel panel-default">
-        <div class="panel-heading">Add New Cusctomer</div>
+        <div class="panel-heading">Add New Api detail</div>
         <div class="panel-body">
             <form method="post" action="" class="form-horizontal" role="form">
                 
@@ -11,12 +11,7 @@
                         <input type="text" class="form-control" name="fields[username]" id="username" value="<?php print $username; ?>" placeholder="User Name" required>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="user_login" class="col-lg-2 control-label">Password</label>
-                    <div class="col-lg-5">
-                        <input type="password" class="form-control" name="fields[password]" id="password" value="<?php print $password; ?>" placeholder="Password" required>
-                    </div>
-                </div>
+               
                 <div class="form-group">
                     <label for="user_login" class="col-lg-2 control-label">Store Url</label>
                     <div class="col-lg-5">
@@ -30,20 +25,6 @@
                     </div>
                 </div>
            
-                <div class="form-group">
-                    <label for="customer_name" class="col-lg-2 control-label">Customer Email</label>
-                    <div class="col-lg-5">
-                        <input type="text" class="form-control" name="fields[email]" id="email" value="<?php print $email; ?>" placeholder="Customer Email" required>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="address" class="col-lg-2 control-label"> Customer Phone</label>
-                    <div class="col-lg-5">
-                        <input type="text" class="form-control" name="fields[phone]" id="phone" value="<?php print $phone; ?>" placeholder="Customer Phone" required>
-                    </div>
-                </div>
-                
                 
                 <div class="form-group">
                     <div class="col-lg-offset-2 col-lg-10">

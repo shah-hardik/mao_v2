@@ -17,7 +17,7 @@ if (!isset($_SESSION['user'])) {
         if (User::doLogin($user_name, $password)) {
             User::initUserSession($user_name);
             //_R(lr('home'));
-            _R(lr('home'));
+            _R(lr('customer'));
         } else {
             $error = "Invalid Credentials";
         }

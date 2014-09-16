@@ -1,6 +1,7 @@
 <?php
 
 $urlArgs = _cg("url_vars");
+
 include _PATH . "instance/front/tpl/bigcommerce.php";
 
 //require_once 'bigcommerce.php';
@@ -20,10 +21,18 @@ $Categories = Bigcommerce::getCategories();
 if ($_REQUEST['doImport'] == 1) {
     
     $Categories = $_REQUEST['categoreIds'];
-   
+  
     foreach ($Categories as $Categorie){
-        print $Categorie;echo '</br>';
-        
+         
+        echo '<div class="hover col-xs-12 col-sm-6 col-md-4 col-lg-3" style="height:300px;width:550px;background-color:#f4f4f4;margin-bottom: 30px;margin-left:40px">';
+        echo '<div style="margin-top:35px">
+            <input type="checkbox" class="chk" value="print $Categorie"/>&nbsp;&nbsp;
+            <span style="font-size: 17px;">';
+        echo $Categorie; 
+        echo '</span>';
+
+       echo  '</div></br>';
+       
     $filter = array("category" => $Categorie);
     $products = Bigcommerce::getProducts($filter);
     
@@ -41,13 +50,17 @@ if ($_REQUEST['doImport'] == 1) {
         echo '</br>';
         }
  else {
-       echo '<b>This Product already imported</b> -';
-        echo $product->name; 
-        echo '</br>';
-      }
+     echo '<b>Already imported</b> -';
+    echo $product->name; echo '&nbsp;&nbsp;';
+    
+    echo '</br>';
+        //include _PATH . "instance/front/tpl/categories_import_data.php";
+       //include _PATH . "instance/front/tpl/import_list.php";
     }
     }
-     include _PATH . "instance/front/tpl/categories_import_data.php";
+    echo '</div>';
+    }
+    
     die();
 }
 

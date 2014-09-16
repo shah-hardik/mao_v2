@@ -30,7 +30,7 @@
 				<td></td>
 				<td><?php print $cr; ?></td>
 				
-				<td><?php print $each_customer['name']; ?> </td>
+				<td><?php print $each_customer['username']; ?> </td>
 				<td><?php print $each_customer['email']; ?> </td>
 				<td><?php print $each_customer['phone']; ?> </td>
 				<td>

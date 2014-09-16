@@ -4,6 +4,10 @@
         delUrl = url;
         $("#myModal").modal("show");
     }
+    function Deleteproduct(url){
+        delUrl = url;
+        $("#myModal").modal("show");
+    }
     
     function ImportCategory()
     {

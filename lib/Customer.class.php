@@ -16,10 +16,35 @@ class Customer {
         $data = _escapeArray($fields);
 
         $map = array();
-        $map['name'] = 'name';
+        $map['username'] = 'username';
         $map['email'] = 'email';
         $map['phone'] = 'phone';
+        $map['password'] = 'password';
+        $map['store_url'] = 'store_url';
+        $map['api_token'] = 'api_token';
 
+        $ds = _bindArray($data, $map);
+        return qi('customers', $ds);
+    }
+public static function addapi($fields) {
+        // Escape array for sql hijacking prevention
+        $data = _escapeArray($fields);
+
+        $map = array();
+        $map['username'] = 'username';
+        $map['store_url'] = 'store_url';
+        $map['api_token'] = 'api_token';
+
+        $ds = _bindArray($data, $map);
+        return qi('customers', $ds);
+    }
+    public static function addprice($fields) {
+        // Escape array for sql hijacking prevention
+        $data = _escapeArray($fields);
+
+        $map = array();
+        $map['min_price'] = 'min_price';
+       
         $ds = _bindArray($data, $map);
         return qi('customers', $ds);
     }
@@ -28,11 +53,13 @@ class Customer {
         // Escape array for sql hijacking prevention
         $data = _escapeArray($fields);
         $map = array();
-
-        $map['name'] = 'name';
+        $map['username'] = 'username';
         $map['email'] = 'email';
         $map['phone'] = 'phone';
-        
+        $map['password'] = 'password';
+        $map['store_url'] = 'store_url';
+        $map['api_token'] = 'api_token';
+
         $ds = _bindArray($data, $map);
 
         $condition = "id = " . $id;

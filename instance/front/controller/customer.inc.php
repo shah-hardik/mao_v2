@@ -45,9 +45,12 @@ switch ($urlArgs[0]) {
         if ($urlArgs[1] > 0) {
 
             $view_data = Customer::getcustomerDetail($urlArgs[1]);
-            $name = $view_data['name'];
+            $username = $view_data['username'];
             $email = $view_data['email'];
+            $password = $view_data['password'];
             $phone = $view_data['phone'];
+            $store_url = $view_data['store_url'];
+            $api_token = $view_data['api_token'];
             
             $id_val = $urlArgs[1];
         }
