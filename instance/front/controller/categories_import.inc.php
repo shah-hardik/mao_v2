@@ -15,7 +15,9 @@ Bigcommerce::configure(array(
 Bigcommerce::setCipher('RC4');
 Bigcommerce::verifyPeer(FALSE);
                            
-  
+$products = Bigcommerce::getProducts();
+
+ 
 $Categories = Bigcommerce::getCategories();
 
 if ($_REQUEST['doImport'] == 1) {

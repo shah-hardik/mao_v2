@@ -13,32 +13,40 @@ Bigcommerce::setCipher('RC4');
 Bigcommerce::verifyPeer(FALSE);
                            
  $option = Bigcommerce::getOptions(); 
-   
+   d($option[0]->Colors);
    //$optionsets = Bigcommerce::getOptionSetsCount();
+ $filter = array("Product" => $option[0]->Colors);
+ $products = Bigcommerce::getProducts($filter);
+ d($products[0]);
+  foreach ($products as $product){
+      //d($product->options);
+  }
  
- //d($optionsets);
   echo '<div style="padding-top:50px;">';
 foreach ($option as $options){
     
-    echo '<div class="hover col-xs-12 col-sm-6 col-md-4 col-lg-3" style="height:100px;width:200px;background-color:#f4f4f4;margin-bottom: 30px;margin-left:40px">';
+    echo '<div class="hover col-xs-12 col-sm-6 col-md-4 col-lg-3" style="height:525px;width:200px;background-color:#f4f4f4;margin-bottom: 30px;margin-left:40px">';
         echo '<div style="margin-top:35px">
             
-            <span style="font-size: 17px;">';
+            <label class="control-label" style="font-size: 17px;">';
         echo $options->name; 
-        echo '</span>';
+        echo '</label>';
 
        echo  '</div></br>';
-        $filter = array("OptionValue" => $options->id);
+       $id = $options->id;
+        $filter = array("OptionValue" => $options->name);
     
    $optionsets = Bigcommerce::getOptionValues($filter);
+   
        foreach ($optionsets as $optionset){
-         echo '<div style="margin-top:35px">
+        
             
-            <span style="font-size: 17px;">';
-        echo $optionset->name; 
+           echo '<span style="font-size: 17px;">';
+        echo $optionset->label; echo '&nbsp (';
+        echo $optionset->value; echo ')';
         echo '</span>';
 
-       echo  '</div></br>';  
+       echo  '</br>';  
        }
        
  echo '</div>';
