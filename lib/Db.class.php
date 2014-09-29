@@ -5,9 +5,9 @@
  * 
  * Normal DB class with singleton pattern
  * 
- * @author Hardik Panchal <hardikpanchal469@gmail.com>
+ * @author Hardik Shah
  * @version 1.0
- * @package BePure
+ * @package MaO
  * 
  */
 class Db {
@@ -73,12 +73,12 @@ class Db {
 
     /**
      * wrapper function for update query
-     * @author Hardik Panchal <hardikpanchal469@gmail.com>
+     * @author Hardik Shah
      * @param String $table
      * @param Array $array list of fields
      * @param String $where where condition
      * @return Integer return number rows updated
-     * @package BePure
+     * @package MaO
      * 
      */
     function update_query($table, $fields, $condition) {
@@ -107,12 +107,12 @@ class Db {
 
     /**
      * wrapper function for insert query
-     * @author Hardik Panchal <hardikpanchal469@gmail.com>
+     * @author Hardik Shah
      * @param String $table
      * @param Array $array list of fields
 
      * @return Integer return number rows inserted
-     * @package BePure
+     * @package MaO
      * 
      */
     function insert_query($table, $fields, $operation='INSERT') {

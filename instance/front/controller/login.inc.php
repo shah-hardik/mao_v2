@@ -4,9 +4,9 @@
  * Admin side Login file
  * 
  * 
- * @author Hardik Panchal <hardikpanchal469@gmail.com>
+ * @author Hardik Shah
  * @version 1.0
- * @package BePure
+ * @package MaO
  * 
  */
 if (!isset($_SESSION['user'])) {

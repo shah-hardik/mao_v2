@@ -10,7 +10,7 @@
  *  Handling XML Responses
  *  Handling JSON Responses
  *  
- * @author Hardik Panchal<hardikpanchal469@gmail.com>
+ * @author Hardik Shah
  * @since October 28, 2013
  * @version 1.0
  * 

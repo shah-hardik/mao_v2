@@ -4,9 +4,9 @@
  * General Functions
  * 
  * 
- * @author Hardik Panchal <hardikpanchal469@gmail.com>
+ * @author Hardik Shah
  * @version 1.0
- * @package BePure
+ * @package MaO
  * 
  */
 
@@ -15,9 +15,9 @@
  * @param String $var
  * @return Boolean
  * 
- * @author Hardik Panchal <hardikpanchal469@gmail.com>
+ * @author Hardik Shah
  * @version 1.0
- * @package BePure
+ * @package MaO
  * 
  */
 function _set($var) {
@@ -31,9 +31,9 @@ function _set($var) {
  * @param String $var
  * @return String $var
  * 
- * @author Hardik Panchal <hardikpanchal469@gmail.com>
+ * @author Hardik Shah
  * @version 1.0
- * @package BePure
+ * @package MaO
  * 
  */
 function _e(&$s, $a = null) {
@@ -45,9 +45,9 @@ function _e(&$s, $a = null) {
  * 
  * @param String $string
  * @return String escaped string
- * @author Hardik Panchal <hardikpanchal469@gmail.com>
+ * @author Hardik Shah
  * @version 1.0
- * @package BePure
+ * @package MaO
  */
 function _escape($string) {
     $string = stripslashes($string);
@@ -57,9 +57,9 @@ function _escape($string) {
 /**
  * Wrapper function for db insert query
  * 
- * @author Hardik Panchal <hardikpanchal469@gmail.com>
+ * @author Hardik Shah
  * @version 1.0
- * @package BePure
+ * @package MaO
  */
 function qi($table, $fields, $operation = 'INSERT') {
     $db = Db::__d();
@@ -84,9 +84,9 @@ function qs($query) {
 /**
  * Wrapper function for db update query
  * 
- * @author Hardik Panchal <hardikpanchal469@gmail.com>
+ * @author Hardik Shah
  * @version 1.0
- * @package BePure
+ * @package MaO
  */
 function qu($table, $fields, $condition) {
     $db = Db::__d();
@@ -99,9 +99,9 @@ function qu($table, $fields, $condition) {
  * @param String $timestamp optional unixtimestamp
  * @return String $date
  * 
- * @author Hardik Panchal <hardikpanchal469@gmail.com>
+ * @author Hardik Shah
  * @version 1.0
- * @package BePure
+ * @package MaO
  */
 function _mysqlDate($timestamp = 0) {
     $timestamp = $timestamp ? $timestamp : time();
