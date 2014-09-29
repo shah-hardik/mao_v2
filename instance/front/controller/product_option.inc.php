@@ -13,11 +13,14 @@ Bigcommerce::setCipher('RC4');
 Bigcommerce::verifyPeer(FALSE);
                            
  $option = Bigcommerce::getOptions(); 
-   d($option[0]->Colors);
-   //$optionsets = Bigcommerce::getOptionSetsCount();
+   //d($option[0]->Colors);
+   
  $filter = array("Product" => $option[0]->Colors);
  $products = Bigcommerce::getProducts($filter);
- d($products[0]);
+// $op = Bigcommerce::options();
+ $op = Bigcommerce::getOption(32);
+ d($op[0]);
+ //d($products[0]);
   foreach ($products as $product){
       //d($product->options);
   }

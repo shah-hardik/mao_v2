@@ -24,13 +24,14 @@
                 data: {doImport: 1, categoreIds: Ids},
                 success: function(r) {
                      $("#categorylist").html(r);
-                    $("#_genericPopup .modal-body").html('<strong>Imported successfully. </strong>');
-                    setTimeout(function() {
+                    
                         hideWait();
-                    }, 2000)
+                    
                 }
             });
-        }
+        }else{
+		alert('Please select Category');
+		}
     }
     
     </script>
